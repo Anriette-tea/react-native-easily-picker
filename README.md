@@ -1,10 +1,10 @@
 # React Native Radio
-npm install react-native-easily-picker
+npm install react-native-easy-picker
 ## Usage
 
 ###Basic Example
 ```tsx
-  import Picker from "react-native-easily-picker"
+  import Picker from "react-native-easy-picker"
 
   const columns = [
     { text: "aa", value: 1 }, { text: "bb", value: 2 }, { text: "cc", value: 3 }, { text: "dd", value: 4 },
