@@ -1,5 +1,4 @@
-import Picker from "../lib/components/Picker"
+import Picker from "../lib/Picker"
 
-export {
-  Picker
-}
+export default Picker
+

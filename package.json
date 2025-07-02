@@ -1,9 +1,8 @@
 {
   "name": "react-native-easily-picker",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "babel lib --out-dir ./dist --source-maps",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -14,7 +13,7 @@
   ],
   "author": "Anriette",
   "license": "ISC",
-  "description": "",
+  "description": "npm install react-native-easily-picker\r ## Usage",
   "peerDependencies": {
     "react": "^19.1.0",
     "react-native": "^0.79.3"
@@ -47,5 +46,16 @@
   ],
   "dependencies": {
     "@babel/preset-typescript": "^7.27.1"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anriette-tea/react-native-easily-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Anriette-tea/react-native-easily-picker/issues"
+  },
+  "homepage": "https://github.com/Anriette-tea/react-native-easily-picker#readme"
 }
