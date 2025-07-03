@@ -167,6 +167,7 @@ const Picker: { <T extends string | number>(props: PickerProps<T> & { ref?: Reac
     }, [optionHeight, columns, value, onChange, props])
 
     const mainStyle: ViewStyle = {
+      height,
       flex: 1,
       backgroundColor: "#ffffff",
       overflow: "hidden",
