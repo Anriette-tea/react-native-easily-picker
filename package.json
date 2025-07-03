@@ -1,5 +1,5 @@
 {
-  "name": "react-native-easy-picker",
+  "name": "react-native-easily-picker",
   "version": "1.0.0",
   "main": "lib/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   ],
   "author": "Anriette",
   "license": "ISC",
-  "description": "npm install react-native-easy-picker\r ## Usage",
+  "description": "npm install react-native-easily-picker\r ## Usage",
   "peerDependencies": {
     "@types/react": "*",
     "@types/react-native": "*",
@@ -43,8 +43,8 @@
     "url": "git+https://github.com/Anriette-tea/react-native-easily-picker.git"
   },
   "bugs": {
-    "url": "https://github.com/Anriette-tea/react-native-easily-picker/issues"
+    "url": "https://github.com/Anriette-tea/react-native-easliy-picker/issues"
   },
-  "homepage": "https://github.com/Anriette-tea/react-native-easily-picker#readme",
+  "homepage": "https://github.com/Anriette-tea/react-native-easliy-picker#readme",
   "types": "./lib/index.d.ts"
 }

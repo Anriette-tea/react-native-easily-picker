@@ -10,6 +10,7 @@ export interface PickerProps<T extends string | number> extends PickerToolBarPro
   value?: T
   columns?: Array<any>
   optionHeight?: number
+  height?: number
   fields?: any
   onChange?: (...args: any) => void
 }
@@ -29,6 +30,8 @@ const Picker: { <T extends string | number>(props: PickerProps<T> & { ref?: Reac
 
     const optionHeight = properties.optionHeight ? properties.optionHeight : 44
 
+    const height = properties.height ? properties.height : 300
+
     const deviceInfo = Dimensions.get("window")
 
     const pickerView = React.useRef<ScrollView>(null)
@@ -44,18 +47,18 @@ const Picker: { <T extends string | number>(props: PickerProps<T> & { ref?: Reac
     const [initialized, setInitialized] = React.useState<boolean>(false)
 
     const Header: React.ReactNode = (
-      <View style={{ height: (300 - optionHeight) / 2, flex: 1 }}></View>
+      <View style={{ height: (height - optionHeight) / 2, flex: 1 }}></View>
     )
 
     const Footer: React.ReactNode = (
-      <View style={{ height: (300 - optionHeight) / 2, flex: 1 }}></View>
+      <View style={{ height: (height - optionHeight) / 2, flex: 1 }}></View>
     )
 
     const lineStyle: ViewStyle = {
       width: deviceInfo.width,
       height: optionHeight,
       position: "absolute",
-      top: (300 - optionHeight) / 2,
+      top: (height - optionHeight) / 2,
       borderTopColor: "#f0f0f0",
       borderBottomColor: "#f0f0f0",
       borderTopWidth: 2,
@@ -163,13 +166,21 @@ const Picker: { <T extends string | number>(props: PickerProps<T> & { ref?: Reac
       }
     }, [optionHeight, columns, value, onChange, props])
 
+    const mainStyle: ViewStyle = {
+      flex: 1,
+      backgroundColor: "#ffffff",
+      overflow: "hidden",
+      borderTopLeftRadius: 10,
+      borderTopRightRadius: 10
+    }
+
     return (
       <View style={styles.positions}>
         <ScrollView style={styles.container}>
           <PickerToolbar title={props.title} showToolbar={props.showToolbar}
             cancelText={props.cancelText} confirmText={props.confirmText}
             onCancel={props.onCancel} onConfirm={() => onConfirm && onConfirm(columns && columns[selectedIndex][fields.value])} />
-          <View style={styles.main}>
+          <View style={mainStyle}>
             <View style={lineStyle}></View>
             <ScrollView
               ref={pickerView}
@@ -206,14 +217,6 @@ const styles = StyleSheet.create({
   container: {
     width: "100%",
     position: "relative"
-  },
-  main: {
-    height: 300,
-    flex: 1,
-    backgroundColor: "#ffffff",
-    overflow: "hidden",
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10
   },
   column: {
     display: "flex",
