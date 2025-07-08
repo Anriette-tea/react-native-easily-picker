@@ -1,4 +1,4 @@
-# React Native Radio
+# React Native Easily Picker
 npm install react-native-easily-picker
 ## Usage
 
